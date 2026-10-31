@@ -1,0 +1,76 @@
+ body {
+            background-color: #01145A;
+            color: #F4EBEB;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+    #topo-max{
+        background-color: #01145A;
+    }
+    #topo{
+        background-color: #01145A;
+    }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F4E0A5 0%, #D4AF37 50%, #AA8828 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border-gradient {
+            border-image: linear-gradient(to right, #D4AF37, #542639, #D4AF37) 1;
+        }
+
+        .glass-header {
+            background: #01145A;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .glass-card {
+            background: #01145A;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(212, 175, 55, 0.18);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(212, 175, 55, 0.5);
+            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.15);
+        }
+
+        .gold-btn {
+            background: linear-gradient(135deg, #D4AF37 0%, #B89327 100%);
+            color: #1A0C12;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+        }
+
+        .gold-btn:hover {
+            background: linear-gradient(135deg, #F4E0A5 0%, #D4AF37 100%);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Pulse glow for floating button */
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            50% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+        }
+
+        .whatsapp-pulse {
+            animation: pulseGlow 2.5s infinite;
+        }
+
+        /* Smooth reveal class placeholder */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }

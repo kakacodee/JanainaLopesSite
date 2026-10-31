@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janaina Lopes | Advogada Especialista em Direito de Família e Sucessões</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: {
+                            900: '#1A0C12',
+                            800: '#2B141D', // Primary dark background
+                            700: '#3D1C29', // Secondary card background
+                            600: '#542639',
+                            500: '#6C324B',
+                        },
+                        gold: {
+                            light: '#F4E0A5',
+                            DEFAULT: '#D4AF37', // Accent gold
+                            dark: '#AA8828',
+                        },
+                        cream: {
+                            100: '#FAF6F0',
+                            200: '#F4EBEB', // Subtle body text accent
+                            300: '#E2D5D5',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        cinzel: ['Cinzel', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+</head>
+<body class="selection:bg-gold selection:text-burgundy-900">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#01145A] glass-header transition-all duration-300">
+        <div id="topo-max" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="topo" class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center bg-blue-1000/80 group-hover:border-gold transition-colors">
+                      <img src="img/Logo - Janaina Lopes.png">                   
+ </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-lg font-semibold text-cream-100 tracking-wide leading-tight group-hover:text-gold transition-colors">Janaina Lopes</span>
+                        <span class="text-[10px] uppercase tracking-widest text-gold/80 font-medium">Advocacia & Consultoria</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#quem-somos" class="text-sm font-medium text-cream-200 hover:text-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gold hover:after:w-full after:transition-all">Quem sou eu?</a>
+                    <a href="#areas-atuacao" class="text-sm font-medium text-cream-200 hover:text-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gold hover:after:w-full after:transition-all">Áreas de atuação</a>
+                    <a href="#retorno-clientes" class="text-sm font-medium text-cream-200 hover:text-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gold hover:after:w-full after:transition-all">Retorno clientes</a>
+                    <a href="#fale-conosco" class="text-sm font-medium text-cream-200 hover:text-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gold hover:after:w-full after:transition-all">Fale conosco</a>
+                </nav>
+
+                <!-- Action CTA -->
+                <div class="hidden lg:flex items-center">
+                    <a href="https://wa.me/5511953584154?text=Olá,%20Dra.%20Janaina.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer" class="gold-btn text-xs uppercase tracking-wider px-5 py-2.5 rounded-full flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-sm"></i>
+                        <span>Agendar Avaliação</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="text-cream-200 hover:text-gold focus:outline-none p-2" aria-label="Abrir Menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#01145A]/95 border-b border-gold/20 backdrop-blur-lg px-4 pt-3 pb-6 space-y-3">
+            <a href="#quem-somos" class="mobile-link block py-2 text-base font-medium text-cream-200 hover:text-[#F6F295] border-b border-burgundy-700">Quem sou eu?</a>
+            <a href="#areas-atuacao" class="mobile-link block py-2 text-base font-medium text-cream-200 hover:text-[#F6F295] border-b border-burgundy-700">Áreas de atuação</a>
+            <a href="#retorno-clientes" class="mobile-link block py-2 text-base font-medium text-cream-200 hover:text-[#F6F295] border-b border-burgundy-700">Retorno clientes</a>
+            <a href="#fale-conosco" class="mobile-link block py-2 text-base font-medium text-cream-200 hover:text-[#F6F295] border-b border-burgundy-700">Fale conosco</a>
+            <div class="pt-2">
+                <a href="https://wa.me/5511953584154?text=Olá,%20Dra.%20Janaina.%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer" class="gold-btn w-full text-center text-xs uppercase tracking-wider py-3 rounded-full flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>Falar pelo WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO & QUEM SOU EU -->
+    <section id="quem-somos" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-burgundy-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-0 w-[400px] h-[400px] bg-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 space-y-6 reveal">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold/30 bg-burgundy-700/50 backdrop-blur-sm">
+                        <i class="fa-solid fa-scale-balanced text-gold text-xs"></i>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-gold">OAB-SP 473.360</span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-cream-100">
+                        Janaina Lopes
+                        <span class="block text-2xl sm:text-3xl font-normal text-gold mt-2 font-serif italic">
+                            Advogada especialista em Direito de Família e Sucessões
+                        </span>
+                    </h1>
+
+                    <div class="w-20 h-1 bg-gradient-to-r from-gold to-transparent rounded-full my-4"></div>
+
+                    <!-- Structured Biography Text -->
+                    <div class="space-y-4 text-cream-200/90 text-sm sm:text-base leading-relaxed font-light">
+                        <p class="text-base sm:text-lg text-cream-100 font-medium leading-relaxed">
+                            Janaina Lopes é advogada, com atuação voltada especialmente ao Direito de Família e Sucessões.
+                        </p>
+
+                        <p>
+                            Sua prática profissional é direcionada à orientação e representação de pessoas em questões que envolvem relações familiares, buscando oferecer um atendimento técnico, estratégico e, ao mesmo tempo, humanizado.
+                        </p>
+
+                        <div class="p-4 rounded-xl bg-[#01145A] border-l-2 border-gold my-4 text-cream-100 italic">
+                            É pós-graduada em Direito de Família e Sucessões, formação que complementa sua atuação profissional e seu compromisso com o constante aperfeiçoamento jurídico.
+                        </div>
+
+                        <p>
+                            Ao longo de sua trajetória, vem construindo uma advocacia pautada pela escuta, responsabilidade e busca por soluções jurídicas adequadas à realidade de cada cliente, especialmente em situações que envolvem alimentos, guarda, convivência familiar, divórcio, partilha de bens, sucessões e demais questões relacionadas ao Direito de Família.
+                        </p>
+
+                        <p>
+                            Mais do que apresentar respostas jurídicas, seu trabalho busca proporcionar ao cliente clareza sobre seus direitos, segurança para tomar decisões e orientação em cada etapa do processo.
+                        </p>
+
+                        <p class="font-medium text-gold/90">
+                            Sua atuação é baseada na união entre conhecimento jurídico, atendimento próximo e estratégias individualizadas, porque cada família possui uma história e cada caso merece ser analisado de forma particular.
+                        </p>
+                    </div>
+
+                    <!-- Hero Call To Action -->
+                    <div class="pt-4 flex flex-wrap gap-4 items-center">
+                        <a href="#fale-conosco" class="gold-btn px-8 py-3.5 rounded-full text-sm font-semibold tracking-wide flex items-center gap-2">
+                            <span>Solicitar Atendimento</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="#areas-atuacao" class="px-6 py-3.5 rounded-full text-sm font-medium border border-gold/30 hover:border-gold text-cream-200 hover:text-gold transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-gavel text-xs"></i>
+                            <span>Ver Áreas de Atuação</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Profile Image / Gallery Placeholder -->
+                <div class="lg:col-span-5 reveal ">
+                    <div class="relative max-w-md mx-auto lg:max-w-none">
+                        <!-- Decorative Backdrop Frame -->
+                        <div class="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-gold/30 via-[#0B49F3] to-gold/10 opacity-70 blur-lg"></div>
+                        
+                        <!-- Main Card Frame -->
+                        <div class="relative rounded-2xl overflow-hidden glass-card p-3">
+                            <!-- Image Holder -->
+                            <div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden bg-[#01145A] flex items-center justify-center group">
+    <img src="https://placehold.co/600x750/01145A/F6F295?text=Dra.+Janaina+Lopes%0AOAB-SP+473.360" 
+         alt="Dra. Janaina Lopes - Advogada especialista em Direito de Família e Sucessões" 
+         class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+         onerror="this.onerror=null; this.src='https://placehold.co/600x750/2B141D/F4EBEB?text=Janaina+Lopes+Advocacia';" />
+    
+    <!-- Overlay badge inside photo -->
+    <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#01145A] backdrop-blur-md border border-gold/30">
+        <div class="flex items-center justify-between">
+            <div>
+                <p class="font-serif font-bold text-cream-100 text-base">Dra. Janaina Lopes</p>
+                <p class="text-xs text-gold">Direito de Família & Sucessões</p>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-[#01145A] flex items-center justify-center border border-gold/40">
+                <i class="fa-solid fa-shield-halved text-gold text-xs"></i>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+                            
+
+                            <!-- Mini Gallery/Credentials Pill Bar -->
+                         
+                   
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: ÁREAS DE ATUAÇÃO -->
+    <section id="areas-atuacao" class="py-20 md:py-28 bg-[#01145A] relative border-y border-gold/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4 reveal">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold">Especialização Técnica</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cream-100">Áreas de Atuação</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full"></div>
+                <p class="text-cream-200/80 text-sm sm:text-base">
+                    Soluções jurídicas estruturadas com foco em assegurar direitos, promover a serenidade familiar e proteger o patrimônio.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between reveal bg-[#042DA4]">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold mb-5">
+                            <i class="fa-solid fa-heart-crack text-xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-[#CDCA7C] mb-3">Divórcio e Dissolução Familiar</h3>
+                        <p class="text-cream-200/80 text-xs sm:text-sm leading-relaxed">
+                            Atuação em divórcios consensuais e litigiosos, definição de questões relacionadas aos filhos e partilha de bens.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gold/10">
+                        <a href="https://wa.me/5511953584154?text=Olá,%20Dra.%20Janaina.%20Gostaria%20de%20orientação%20sobre%20Divórcio." target="_blank" class="text-xs text-gold hover:text-gold-light font-semibold inline-flex items-center gap-1 group">
+                            <span>Saber mais</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between reveal bg-[#042DA4]">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold mb-5">
+                            <i class="fa-solid fa-child text-xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-[#CDCA7C] mb-3">Guarda e Convivência</h3>
+                        <p class="text-cream-200/80 text-xs sm:text-sm leading-relaxed">
+                            Orientação e atuação em questões de guarda; Regulamentação de convivência; Alteração de regime de guarda; Situações que envolvam o melhor interesse dos filhos; Alienação parental.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gold/10">
+                        <a href="https://wa.me/5511953584154?text=Olá,%20Dra.%20Janaina.%20Gostaria%20de%20orientação%20sobre%20Guarda%20e%20Convivência." target="_blank" class="text-xs text-gold hover:text-gold-light font-semibold inline-flex items-center gap-1 group">
+                            <span>Saber mais</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between reveal bg-[#042DA4]">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold mb-5">
+                            <i class="fa-solid fa-hand-holding-dollar text-xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-[#CDCA7C] mb-3">Pensão Alimentícia</h3>
+                        <p class="text-cream-200/80 text-xs sm:text-sm leading-relaxed">
+                            Atuação em ações de fixação; Revisão; Exoneração; Cobrança de alimentos; Considerando as necessidades de quem recebe e as possibilidades de quem paga.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gold/10">
+                        <a href="https://wa.me/5511953584154?text=Olá,%20Dra.%20Janaina.%20Gostaria%20de%20orientação%20sobre%20Pensão%20Alimentícia." target="_blank" class="text-xs text-gold hover:text-gold-light font-semibold inline-flex items-center gap-1 group">
+                            <span>Saber mais</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between reveal bg-[#042DA4]">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold mb-5">
+                            <i class="fa-solid fa-scroll text-xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-[#CDCA7C] mb-3">Inventário e Sucessões</h3>
+                        <p class="text-cream-200/80 text-xs sm:text-sm leading-relaxed">
+                            Assessoria em inventários judiciais e extrajudiciais; Partilha de bens; Testamentos e demais questões relacionadas à sucessão.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gold/10">
+                        <a href="https://wa.me/5511953584154?text=Olá,%20Dra.%20Janaina.%20Gostaria%20de%20orientação%20sobre%20Inventário." target="_blank" class="text-xs text-gold hover:text-gold-light font-semibold inline-flex items-center gap-1 group">
+                            <span>Saber mais</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between reveal bg-[#042DA4]">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold mb-5">
+                            <i class="fa-solid fa-ring text-xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-[#CDCA7C] mb-3">União Estável</h3>
+                        <p class="text-cream-200/80 text-xs sm:text-sm leading-relaxed">
+                            Reconhecimento e dissolução de união estável; Contrato de namoro; Contrato de convivência; Definição e alteração do regime de bens.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gold/10">
+                        <a href="https://wa.me/5511953584154?text=Olá,%20Dra.%20Janaina.%20Gostaria%20de%20orientação%20sobre%20União%20Estável." target="_blank" class="text-xs text-gold hover:text-gold-light font-semibold inline-flex items-center gap-1 group">
+                            <span>Saber mais</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between reveal bg-[#042DA4]">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold mb-5">
+                            <i class="fa-solid fa-dna text-xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-[#CDCA7C] mb-3">Filiação</h3>
+                        <p class="text-cream-200/80 text-xs sm:text-sm leading-relaxed">
+                            Investigação ou reconhecimento de paternidade e outras questões relacionadas à filiação.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gold/10">
+                        <a href="https://wa.me/5511953584154?text=Olá,%20Dra.%20Janaina.%20Gostaria%20de%20orientação%20sobre%20Reconhecimento%20de%20Paternidade." target="_blank" class="text-xs text-gold hover:text-gold-light font-semibold inline-flex items-center gap-1 group">
+                            <span>Saber mais</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between reveal bg-[#042DA4]">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold mb-5">
+                            <i class="fa-solid fa-user-shield text-xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-[#CDCA7C] mb-3">Tutela e Curatela</h3>
+                        <p class="text-cream-200/80 text-xs sm:text-sm leading-relaxed">
+                            Ação de tutela e definição do responsável legal; Curatela e tomada de decisões; Nomeação, substituição ou remoção de tutor/curador; Prestação de contas e proteção patrimonial.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gold/10">
+                        <a href="https://wa.me/5511953584154?text=Olá,%20Dra.%20Janaina.%20Gostaria%20de%20orientação%20sobre%20Tutela%20e%20Curatela." target="_blank" class="text-xs text-gold hover:text-gold-light font-semibold inline-flex items-center gap-1 group">
+                            <span>Saber mais</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between reveal bg-[#042DA4]">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center text-gold mb-5">
+                            <i class="fa-solid fa-vault text-xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-[#CDCA7C] mb-3">Planejamento Familiar e Patrimonial</h3>
+                        <p class="text-cream-200/80 text-xs sm:text-sm leading-relaxed">
+                            Orientação jurídica para organização do patrimônio e planejamento sucessório, buscando maior segurança jurídica para a família e preservação do patrimônio.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gold/10">
+                        <a href="https://wa.me/5511953584154?text=Olá,%20Dra.%20Janaina.%20Gostaria%20de%20orientação%20sobre%20Planejamento%20Patrimonial." target="_blank" class="text-xs text-gold hover:text-gold-light font-semibold inline-flex items-center gap-1 group">
+                            <span>Saber mais</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: RETORNO CLIENTES -->
+    <section id="retorno-clientes" class="py-20 md:py-28 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4 reveal">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold">Depoimentos & Experiências</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cream-100">Retorno dos Clientes</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full"></div>
+                <p class="text-cream-200/80 text-sm sm:text-base">
+                    A confiança depositada no trabalho é o maior indicador de um atendimento fundamentado em empatia, ética e excelência.
+                </p>
+            </div>
+
+            <!-- Feedback Placeholders Grid / Interactive Feedback Feed -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Feedback Card 1 -->
+                <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between reveal bg-[#0B49F3]">
+                    <div class="absolute -top-3 right-6 bg-gold text-burgundy-900 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-circle-check text-xs"></i>
+                        <span>Cliente Verificado</span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Rating Stars -->
+                        <div class="flex text-gold text-sm gap-1 pt-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="text-cream-200/90 text-xs sm:text-sm italic leading-relaxed">
+                            "A Dra. Janaina conduziu meu processo de divórcio e partilha com extrema clareza e sensibilidade. Em um momento tão delicado, ter uma profissional técnica e atenciosa fez toda a diferença."
+                        </p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-gold/10 flex items-center justify-between">
+                        <div>
+                            <span class="block font-serif font-semibold text-cream-100 text-sm">M. R. S.</span>
+                            <span class="text-[11px] text-cream-300">Divórcio & Partilha</span>
+                        </div>
+                        <i class="fa-solid fa-quote-right text-gold/30 text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Feedback Card 2 -->
+                <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between reveal bg-[#0B49F3]">
+                    <div class="absolute -top-3 right-6 bg-gold text-burgundy-900 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-circle-check text-xs"></i>
+                        <span>Cliente Verificado</span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Rating Stars -->
+                        <div class="flex text-gold text-sm gap-1 pt-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="text-cream-200/90 text-xs sm:text-sm italic leading-relaxed">
+                            "Excelente profissional. Sempre disponível para esclarecer dúvidas de forma simples e direta. Conseguiu resolver a regulamentação de guarda do meu filho com muita rapidez e segurança."
+                        </p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-gold/10 flex items-center justify-between">
+                        <div>
+                            <span class="block font-serif font-semibold text-cream-100 text-sm">C. A. F.</span>
+                            <span class="text-[11px] text-cream-300">Guarda & Convivência</span>
+                        </div>
+                        <i class="fa-solid fa-quote-right text-gold/30 text-2xl"></i>
+                    </div>
+                </div>
+
+                <!-- Feedback Card 3 -->
+                <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between reveal bg-[#0B49F3]">
+                    <div class="absolute -top-3 right-6 bg-gold text-burgundy-900 text-[10px] uppercase tracking-wider font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                        <i class="fa-solid fa-circle-check text-xs"></i>
+                        <span>Cliente Verificado</span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Rating Stars -->
+                        <div class="flex text-gold text-sm gap-1 pt-2">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <p class="text-cream-200/90 text-xs sm:text-sm italic leading-relaxed">
+                            "O suporte prestado durante o inventário familiar trouxe a paz que nossa família precisava. Trabalho impecável, transparente e altamente humanizado."
+                        </p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-gold/10 flex items-center justify-between">
+                        <div>
+                            <span class="block font-serif font-semibold text-cream-100 text-sm">L. G. M.</span>
+                            <span class="text-[11px] text-cream-300">Inventário & Sucessões</span>
+                        </div>
+                        <i class="fa-solid fa-quote-right text-gold/30 text-2xl"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- WhatsApp Direct Feedback CTA -->
+            <div class="mt-12 text-center reveal">
+                <p class="text-xs text-cream-300 mb-4">Sua tranquilidade e segurança jurídica são nossa prioridade.</p>
+                <a href="https://wa.me/5511953584154?text=Olá,%20Dra.%20Janaina.%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20orientação." 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[01145A] hover:bg-[#0B49F3] border border-gold/30 text-cream-100 text-xs uppercase tracking-wider font-medium transition-all">
+                    <i class="fa-brands fa-whatsapp text-gold text-sm"></i>
+                    <span>Conversar diretamente com a Dra. Janaina</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: FALE CONOSCO -->
+    <section id="fale-conosco" class="py-20 md:py-28 bg-[#01145A] border-t border-gold/10 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Contact Info Left Column -->
+                <div class="lg:col-span-5 space-y-6 reveal">
+                    <span class="text-xs font-bold uppercase tracking-widest text-gold">Atendimento Personalizado</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cream-100">Fale Conosco</h2>
+                    <div class="w-16 h-1 bg-gold rounded-full"></div>
+
+                    <p class="text-cream-200/90 text-sm sm:text-base leading-relaxed">
+                        Entre em contato para agendar uma consulta inicial ou esclarecer dúvidas. O atendimento é feito com total confidencialidade e atenção dedicada.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-[#01145A] border border-gold/15">
+                            <div class="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold shrink-0">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </div>
+                            <div class="bg-[#01145A]">
+                                <h4 class="text-xs text-gold uppercase tracking-wider font-semibold">WhatsApp Directo</h4>
+                                <a href="https://wa.me/5511953584154" target="_blank" class="text-sm font-medium text-cream-100 hover:text-gold transition-colors">
+                                    (11) 95358-4154
+                                </a>
+                                <p class="text-[11px] text-cream-300">Resposta rápida em horário comercial</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-[#01145A] border border-gold/15">
+                            <div class="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold shrink-0">
+                                <i class="fa-solid fa-id-card text-lg"></i>
+                            </div>
+                            <div class="bg-[#01145A]">
+                                <h4 class="text-xs text-gold uppercase tracking-wider font-semibold">Registro Profissional</h4>
+                                <p class="text-sm font-medium text-cream-100">OAB/SP 473.360</p>
+                                <p class="text-[11px] text-cream-300">Ordem dos Advogados do Brasil - São Paulo</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-[#01145A] border border-gold/15">
+                            <div class="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold shrink-0">
+                                <i class="fa-solid fa-shield-halved text-lg"></i>
+                            </div>
+                            <div class="bg-[#01145A]">
+                                <h4 class="text-xs text-gold uppercase tracking-wider font-semibold">Sigilo & Ética</h4>
+                                <p class="text-sm font-medium text-cream-100">Atendimento Humanizado</p>
+                                <p class="text-[11px] text-cream-300">Análise individualizada de cada situação</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Right Column -->
+                <div class="lg:col-span-7 reveal ">
+                    <div class="glass-card rounded-2xl p-6 sm:p-10 relative bg-[#042DA4]">
+                        <h3 class="font-serif text-2xl font-bold text-cream-100 mb-2">Envie uma Mensagem</h3>
+                        <p class="text-xs sm:text-sm text-cream-300 mb-6">Preencha o formulário abaixo para enviar sua solicitação diretamente.</p>
+
+                        <!-- Static Interactive Form -->
+                        <form id="contact-form" class="space-y-5">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 mb-2">Nome Completo</label>
+                                <input type="text" id="name" required placeholder="Digite seu nome completo" class="w-full px-4 py-3 rounded-xl bg-[#01145A] border border-gold/20 text-cream-100 placeholder-cream-300/40 text-sm focus:outline-none focus:border-gold transition-colors">
+                            </div>
+
+                            <div>
+                                <label for="phone" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 mb-2">Telefone / WhatsApp</label>
+                                <input type="tel" id="phone" required placeholder="(11) 99999-9999" class="w-full px-4 py-3 rounded-xl bg-[#01145A] border border-gold/20 text-cream-100 placeholder-cream-300/40 text-sm focus:outline-none focus:border-gold transition-colors">
+                            </div>
+
+                            <div>
+                                <label for="subject" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 mb-2">Assunto Principal</label>
+                                <select id="subject" class="w-full px-4 py-3 rounded-xl bg-[#01145A] border border-gold/20 text-cream-100 text-sm focus:outline-none focus:border-gold transition-colors">
+                                    <option value="Divórcio / Dissolução">Divórcio e Dissolução Familiar</option>
+                                    <option value="Guarda e Convivência">Guarda e Convivência</option>
+                                    <option value="Pensão Alimentícia">Pensão Alimentícia</option>
+                                    <option value="Inventário e Sucessões">Inventário e Sucessões</option>
+                                    <option value="União Estável">União Estável</option>
+                                    <option value="Filiação">Filiação / Paternidade</option>
+                                    <option value="Tutela e Curatela">Tutela e Curatela</option>
+                                    <option value="Planejamento Patrimonial">Planejamento Familiar e Patrimonial</option>
+                                    <option value="Outro Assunto">Outro Assunto</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-cream-200 mb-2">Mensagem</label>
+                                <textarea id="message" rows="4" required placeholder="Descreva brevemente sua dúvida ou situação..." class="w-full px-4 py-3 rounded-xl bg-[#01145A] border border-gold/20 text-cream-100 placeholder-cream-300/40 text-sm focus:outline-none focus:border-gold transition-colors"></textarea>
+                            </div>
+
+                            <button type="submit" class="gold-btn w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wider flex items-center justify-center gap-2 bg-[#CDCA7C]">
+                                <i class="fa-solid fa-paper-plane text-xs"></i>
+                                <span>Enviar Mensagem via WhatsApp</span>
+                            </button>
+                        </form>
+
+                        <!-- Notification Container -->
+                        <div id="form-message" class="hidden mt-4 p-4 rounded-xl bg-burgundy-700 border border-gold text-center text-xs text-gold"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#01145A] border-t border-gold/20 pt-12 pb-8 text-cream-300 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-gold/10">
+                
+                <!-- Brand Info -->
+                <div class="md:col-span-2 space-y-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center bg-blue-1000/80 group-hover:border-gold transition-colors">
+                      <img src="img/Logo - Janaina Lopes.png">  
+                        </div>
+                        <span class="font-serif text-base font-semibold text-cream-100">Janaina Lopes Advocacia</span>
+                    </div>
+                    <p class="text-cream-300/80 max-w-md text-xs leading-relaxed">
+                        Advocacia especializada em Direito de Família e Sucessões. Atendimento humanizado, técnico e individualizado com foco na segurança jurídica e proteção familiar.
+                    </p>
+                    <span class="inline-block px-2.5 py-1 rounded  bg-[#01145A] text-gold text-[11px] font-mono border border-gold/20">OAB-SP 473.360</span>
+                </div>
+
+                <!-- Quick Navigation -->
+                <div>
+                    <h4 class="font-serif font-bold text-cream-100 text-sm mb-3">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#quem-somos" class="hover:text-gold transition-colors">Quem sou eu?</a></li>
+                        <li><a href="#areas-atuacao" class="hover:text-gold transition-colors">Áreas de Atuação</a></li>
+                        <li><a href="#retorno-clientes" class="hover:text-gold transition-colors">Retorno Clientes</a></li>
+                        <li><a href="#fale-conosco" class="hover:text-gold transition-colors">Fale Conosco</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Notice -->
+                <div>
+                    <h4 class="font-serif font-bold text-cream-100 text-sm mb-3">Atendimento Profissional</h4>
+                    <p class="text-[11px] leading-relaxed text-cream-300/80">
+                        Atendimentos presenciais e virtuais com agendamento prévio. Consulte disponibilidade via WhatsApp oficial.
+                    </p>
+                    <div class="mt-3">
+                        <a href="https://wa.me/5511953584154" target="_blank" class="text-gold hover:underline font-medium text-xs">
+                            (11) 95358-4154
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-cream-300/60">
+                <p>&copy; <span id="year"></span> Janaina Lopes Advocacia. Todos os direitos reservados. OAB-SP 473.360.</p>
+                <p>Direito de Família e Sucessões | São Paulo - SP</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/5511953584154?text=Olá,%20Dra.%20Janaina.%20Gostaria%20de%20agendar%20uma%20avaliação" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Falar no WhatsApp"
+       class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full flex items-center justify-center shadow-2xl whatsapp-pulse transition-transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <img src="img/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form Submit Handler (Redirects to WhatsApp with formatted message)
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !phone || !message) {
+                formMessage.textContent = "Por favor, preencha todos os campos obrigatórios.";
+                formMessage.classList.remove('hidden');
+                return;
+            }
+
+            // Format message for WhatsApp
+            const text = `*Contato via Site - Janaina Lopes Advocacia*%0A%0A` +
+                         `*Nome:* ${encodeURIComponent(name)}%0A` +
+                         `*Telefone:* ${encodeURIComponent(phone)}%0A` +
+                         `*Assunto:* ${encodeURIComponent(subject)}%0A` +
+                         `*Mensagem:* ${encodeURIComponent(message)}`;
+
+            const whatsappUrl = `https://wa.me/5511953584154?text=${text}`;
+
+            formMessage.textContent = "Redirecionando para o WhatsApp da Dra. Janaina Lopes...";
+            formMessage.classList.remove('hidden');
+
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+            }, 800);
+        });
+
+        // Scroll Reveal Animations
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            const windowHeight = window.innerHeight;
+
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 100;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+</body>
+</html>
