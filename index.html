@@ -74,7 +74,7 @@
                     <a href="#retorno-clientes" class="text-sm font-medium text-cream-200 hover:text-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gold hover:after:w-full after:transition-all">Retorno clientes</a>
                     <a href="#fale-conosco" class="text-sm font-medium text-cream-200 hover:text-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-gold hover:after:w-full after:transition-all">Fale conosco</a>
                 </nav>
-
+                
                 <!-- Action CTA -->
                 <div class="hidden lg:flex items-center">
                     <a href="https://wa.me/5511953584154?text=Olá,%20Dra.%20Janaina.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer" class="gold-btn text-xs uppercase tracking-wider px-5 py-2.5 rounded-full flex items-center gap-2">
@@ -82,7 +82,9 @@
                         <span>Agendar Avaliação</span>
                     </a>
                 </div>
-
+                <div id="status-flutuante" class="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-3 py-2 rounded-full bg-[#042372]/90 backdrop-blur-md border border-[#CDCA7C]/30 text-xs shadow-lg transition-all duration-300">
+    <span id="status-ponto" class="w-2.5 h-2.5 rounded-full"></span>
+</div>
                 <!-- Mobile Hamburger Button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" type="button" class="text-cream-200 hover:text-gold focus:outline-none p-2" aria-label="Abrir Menu">
@@ -535,7 +537,7 @@
                             </div>
                             <div class="bg-[#01145A]">
                                 <h4 class="text-xs text-gold uppercase tracking-wider font-semibold">WhatsApp Directo</h4>
-                                <a href="https://wa.me/5511953584154" target="_blank" class="text-sm font-medium text-cream-100 hover:text-gold transition-colors">
+                                <a id="zap" href="https://wa.me/5511953584154" target="_blank" class="text-sm font-medium text-cream-100 hover:text-gold transition-colors">
                                     (11) 95358-4154
                                 </a>
                                 <p class="text-[11px] text-cream-300">Resposta rápida em horário comercial</p>
@@ -604,7 +606,7 @@
                                 <textarea id="message" rows="4" required placeholder="Descreva brevemente sua dúvida ou situação..." class="w-full px-4 py-3 rounded-xl bg-[#01145A] border border-gold/20 text-cream-100 placeholder-cream-300/40 text-sm focus:outline-none focus:border-gold transition-colors"></textarea>
                             </div>
 
-                            <button type="submit" class="gold-btn w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wider flex items-center justify-center gap-2 bg-[#CDCA7C]">
+                            <button id="zap" type="submit" class="gold-btn w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wider flex items-center justify-center gap-2 bg-[#CDCA7C]">
                                 <i class="fa-solid fa-paper-plane text-xs"></i>
                                 <span>Enviar Mensagem via WhatsApp</span>
                             </button>
@@ -656,7 +658,7 @@
                         Atendimentos presenciais e virtuais com agendamento prévio. Consulte disponibilidade via WhatsApp oficial.
                     </p>
                     <div class="mt-3">
-                        <a href="https://wa.me/5511953584154" target="_blank" class="text-gold hover:underline font-medium text-xs">
+                        <a id="zap" href="https://wa.me/5511953584154" target="_blank" class="text-gold hover:underline font-medium text-xs">
                             (11) 95358-4154
                         </a>
                     </div>
@@ -672,7 +674,7 @@
     </footer>
 
     <!-- FLOATING WHATSAPP BUTTON -->
-    <a href="https://wa.me/5511953584154?text=Olá,%20Dra.%20Janaina.%20Gostaria%20de%20agendar%20uma%20avaliação" 
+    <a id="zap" href="https://wa.me/5511953584154?text=Olá,%20Dra.%20Janaina.%20Gostaria%20de%20agendar%20uma%20avaliação" 
        target="_blank" 
        rel="noopener noreferrer" 
        aria-label="Falar no WhatsApp"
@@ -718,14 +720,29 @@
                 formMessage.classList.remove('hidden');
                 return;
             }
+            const horaAtual = new Date()
 
+            const horario = horaAtual.getHours()
+            let saudacao = "oi"
             // Format message for WhatsApp
-            const text = `*Contato via Site - Janaina Lopes Advocacia*%0A%0A` +
+            if(horario >=4 && horario< 12){
+                        saudacao = "Bom dia!"
+
+            }
+            else if(horario >=12 && horario<18){
+                       saudacao = "Boa tarde!"
+
+            }
+            else {
+                saudacao = "Boa noite!"
+            }
+            const text = `${saudacao}%0A%0A \n` +
+            `
+                        *Contato via Site - Janaina Lopes Advocacia*%0A%0A` +
                          `*Nome:* ${encodeURIComponent(name)}%0A` +
                          `*Telefone:* ${encodeURIComponent(phone)}%0A` +
                          `*Assunto:* ${encodeURIComponent(subject)}%0A` +
                          `*Mensagem:* ${encodeURIComponent(message)}`;
-
             const whatsappUrl = `https://wa.me/5511953584154?text=${text}`;
 
             formMessage.textContent = "Redirecionando para o WhatsApp da Dra. Janaina Lopes...";
@@ -750,7 +767,29 @@
                 }
             });
         }
+        function Online(){
+            const horaAtual = new Date()
 
+            const horario = horaAtual.getHours()
+            const Dia = horaAtual.getDay()
+
+            const diaUtil = Dia >=1 && Dia <=5
+            const horarioUtil = horario >=9 && hora < 18
+            const ponto = document.getElementById("status-ponto");
+
+            if(diaUtil && horarioUtil){
+                ponto.className = "w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_#10B981]";
+                ponto.setAttribute("aria-label", "Online")
+                ponto.setAttribute("title", "Offline - Deixe sua mensagem");
+            }
+            else{
+                ponto.className = "w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse shadow-[0_0_8px_#EF4444]";
+                ponto.setAttribute("aria-label", "Offline")
+                ponto.setAttribute("title", "Offline - Deixe sua mensagem");
+            }
+
+        }
+        Online()
         window.addEventListener('scroll', revealOnScroll);
         window.addEventListener('load', revealOnScroll);
     </script>
