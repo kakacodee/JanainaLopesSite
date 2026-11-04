@@ -58,7 +58,7 @@
             <div id="topo" class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center bg-blue-1000/80 group-hover:border-gold transition-colors">
+                    <div class="w-10 h-10  flex items-center justify-center bg-blue-1000/80 group-hover:border-gold transition-colors">
                       <img src="img/Logo - Janaina Lopes.png">                   
  </div>
                     <div class="flex flex-col">
@@ -76,12 +76,12 @@
                 </nav>
                 
                 <!-- Action CTA -->
-                <div class="hidden lg:flex items-center">
+                <!--<div class="hidden lg:flex items-center">
                     <a href="https://wa.me/5511953584154?text=Olá,%20Dra.%20Janaina.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer" class="gold-btn text-xs uppercase tracking-wider px-5 py-2.5 rounded-full flex items-center gap-2">
                         <i class="fa-brands fa-whatsapp text-sm"></i>
                         <span>Agendar Avaliação</span>
                     </a>
-                </div>
+                </div>-->
                 <div id="status-flutuante" class="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-3 py-2 rounded-full bg-[#042372]/90 backdrop-blur-md border border-[#CDCA7C]/30 text-xs shadow-lg transition-all duration-300">
     <span id="status-ponto" class="w-2.5 h-2.5 rounded-full"></span>
 </div>
@@ -613,7 +613,7 @@
                         </form>
 
                         <!-- Notification Container -->
-                        <div id="form-message" class="hidden mt-4 p-4 rounded-xl bg-burgundy-700 border border-gold text-center text-xs text-gold"></div>
+                        <div id="form-message" class="hidden mt-4 p-4 rounded-xl bg-[#01145A] border border-gold text-center text-xs text-gold"></div>
                     </div>
                 </div>
 
@@ -774,7 +774,7 @@
             const Dia = horaAtual.getDay()
 
             const diaUtil = Dia >=1 && Dia <=5
-            const horarioUtil = horario >=9 && hora < 18
+            const horarioUtil = horario >=9 && horario < 18
             const ponto = document.getElementById("status-ponto");
 
             if(diaUtil && horarioUtil){
